@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
 const TodoForm = ({ todos, setTodos, todoValue, setTodoValue }) => {
