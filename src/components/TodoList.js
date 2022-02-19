@@ -1,14 +1,11 @@
 import React from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import { TodoItem } from "./TodoItem";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, deleteTodo }) => {
   return (
     <div className="todo-list">
       {todos.map((todo, index) => (
-        <div className="todo" key={index}>
-          <p>{todo}</p>
-          <AiOutlineClose />
-        </div>
+        <TodoItem key={index} id={index} deleteTodo={deleteTodo} todo={todo} />
       ))}
     </div>
   );

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
 const TodoForm = ({ todos, setTodos, todoValue, setTodoValue }) => {
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     setTodos([todoValue, ...todos]);
   };
 
@@ -13,12 +13,13 @@ const TodoForm = ({ todos, setTodos, todoValue, setTodoValue }) => {
         type="text"
         className="todo-input"
         value={todoValue}
+        placeholder="New Tast"
         onChange={(e) => {
           setTodoValue(e.target.value);
         }}
       />
       <button
-        className="delete-todo"
+        className="add-todo"
         onClick={(e) => {
           e.preventDefault();
           handleSubmit();
